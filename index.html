@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Student Club Members</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f9fafb;
+            color: #333;
+            max-width: 480px;
+            margin: 40px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgb(0 0 0 / 0.1);
+            background-color: white;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        input[type="text"] {
+            width: calc(50% - 12px);
+            padding: 10px 12px;
+            margin: 0 8px 15px 0;
+            font-size: 16px;
+            border: 1.8px solid #ccc;
+            border-radius: 8px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 5px #3498db;
+        }
+
+        input[type="button"] {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-weight: 600;
+        }
+
+        input[type="button"]:hover {
+            background-color: #2980b9;
+        }
+
+        #result {
+            margin-top: 30px;
+            background-color: #ecf0f1;
+            border-radius: 12px;
+            padding: 20px;
+            font-size: 16px;
+            min-height: 80px;
+            box-shadow: inset 0 0 8px #bdc3c7;
+            color: #2c3e50;
+        }
+
+        #result h3 {
+            margin-top: 0;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+            color: #2980b9;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h2>Student Club Members</h2>
+
+    <input type="text" id="fname" placeholder="Enter your first name" />
+    <input type="text" id="lname" placeholder="Enter your last name" />
+
+    <input type="button" py-click="get_name" value="ADD MEMBER" />
+
+    <div id="result"></div>
+
+    <py-script src="main.py"></py-script>
+
+</body>
+</html>
